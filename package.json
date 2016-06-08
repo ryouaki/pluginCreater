@@ -1,0 +1,25 @@
+{
+  "name": "cphelper",
+  "version": "1.0.0",
+  "description": "This module is used for create empty cordova plugin ,You can develop your own plugin basic on this cordova plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CordovaCn/CordovaPluginHelper.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "helper",
+    "tools"
+  ],
+  "author": "ryou (46517115@qq.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CordovaCn/CordovaPluginHelper/issues"
+  },
+  "homepage": "https://github.com/CordovaCn/CordovaPluginHelper#readme"
+}
