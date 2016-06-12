@@ -1,7 +1,7 @@
 {
   "name": "cphelper",
   "version": "1.0.0",
-  "description": "This module is used for create empty cordova plugin ,You can develop your own plugin basic on this cordova plugin.",
+  "description": "This is a tools for cordova developer to generate a basic file and directory structure for cordova custom plugin.",
   "main": "plugincreater",
   "preferGlobal": true,
   "bin": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CordovaCn/CordovaPluginHelper.git"
+    "url": "git+https://github.com/ryouaki/pluginCreater.git"
   },
   "files": [
     "LICENSE"
@@ -23,7 +23,7 @@
   "author": "ryou (46517115@qq.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CordovaCn/CordovaPluginHelper/issues"
+    "url": "https://github.com/ryouaki/pluginCreater/issues"
   },
-  "homepage": "https://github.com/CordovaCn/CordovaPluginHelper#readme"
+  "homepage": "https://github.com/ryouaki/pluginCreater"
 }
