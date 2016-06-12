@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-custom",
+  "name": "<plugin-name>",
   "version": "0.0.1",
   "description": "Input your plugin's description!",
   "cordova": {
-    "id": "cordova-plugin-custom",
+    "id": "<plugin-name>",
     "platforms": [
       "android",
       "ios"

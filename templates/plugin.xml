@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="cordova-plugin-custom"
+           id="<plugin-name>"
       version="0.0.1">
-    <name>cordova-plugin-custom</name>
+    <name><plugin-name></name>
     <!-- change the items as below -->
     <description>Your own description</description>
     <!--<license></license>-->

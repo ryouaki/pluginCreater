@@ -4,6 +4,7 @@
 
 var pkg = require('./package.json');
 var path = require('path');
+var fs = require('fs');
 
 var currentDir = process.cwd();
 const DEFAULT_PLUGIN_NAME = 'cordova-plugin-custom';
@@ -119,8 +120,73 @@ function createPlugin(tasks) {
     targetPath = path.join(currentDir);
   }
 
-  
+  if (!path.isAbsolute(targetPath)) {
+    targetPath = path.join(currentDir,targetPath);
+  }
 
+  let rootPath = path.join(targetPath,targetName);
+
+  try {
+    fs.mkdirSync(rootPath);
+    fs.mkdirSync(path.join(rootPath,'src'));
+    fs.mkdirSync(path.join(rootPath,'src','android'));
+    fs.mkdirSync(path.join(rootPath,'src','ios'));
+    fs.mkdirSync(path.join(rootPath,'www'));
+    
+    createReadme(targetName, rootPath);
+    createPackage(targetName, rootPath);
+    createPluginXML(targetName, rootPath);
+    createJSModule(targetName, rootPath);
+    createPlatformSrc(targetName, rootPath);
+  } catch(e) {
+    console.log(e.message);
+  }
+}
+
+function createReadme(targetName,rootPath) {
+  let buff = fs.readFileSync(path.join(__dirname, '.', 'templates', 'README.md'), 'utf-8');
+  var reg=new RegExp('<plugin-name>', 'g'); //创建正则RegExp对象   
+  buff = buff.replace(reg, targetName);
+  write(path.join(rootPath, '.', 'README.md'), buff);
+  return ;
+}
+
+function createPluginXML(targetName,rootPath) {
+  let buff = fs.readFileSync(path.join(__dirname, '.', 'templates', 'plugin.xml'), 'utf-8');
+  var reg=new RegExp('<plugin-name>', 'g'); //创建正则RegExp对象   
+  buff = buff.replace(reg, targetName);
+  write(path.join(rootPath, '.', 'plugin.xml'), buff);
+  return ;
+}
+
+function createPackage(targetName,rootPath) {
+  let buff = fs.readFileSync(path.join(__dirname, '.', 'templates', 'package.json'), 'utf-8');
+  var reg=new RegExp('<plugin-name>', 'g'); //创建正则RegExp对象   
+  buff = buff.replace(reg, targetName);
+  write(path.join(rootPath, '.', 'package.json'), buff);
+  return ;
+}
+
+function createJSModule(targetName,rootPath) {
+  let buff = fs.readFileSync(path.join(__dirname, '.', 'templates', 'www', 'customPlugin.js'), 'utf-8');
+  write(path.join(rootPath, '.', 'www', 'customPlugin.js'), buff);
+  return ;
+}
+
+function createPlatformSrc(targetName,rootPath) {
+  let buffJava = fs.readFileSync(path.join(__dirname, '.', 'templates', 'src', 'android', 'customPlugin.java'), 'utf-8');
+  write(path.join(rootPath, '.', 'src', 'android', 'customPlugin.js'), buffJava);
+  let buffH = fs.readFileSync(path.join(__dirname, '.', 'templates', 'src', 'ios', 'CDVCustomPlugin.h'), 'utf-8');
+  write(path.join(rootPath, '.', 'src', 'ios', 'CDVCustomPlugin.h'), buffH);
+  let buffM = fs.readFileSync(path.join(__dirname, '.', 'templates', 'src', 'ios', 'CDVCustomPlugin.m'), 'utf-8');
+  write(path.join(rootPath, '.', 'src', 'ios', 'CDVCustomPlugin.m'), buffM);
+  return ;
+}
+
+function write(path, str) {
+  fs.writeFileSync(path, str ,{flag:'w+'});
 }
 
 exec(process.argv);
+
+process.exit();
