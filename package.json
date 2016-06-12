@@ -1,11 +1,11 @@
 {
-  "name": "cphelper",
+  "name": "pluginCreater",
   "version": "1.0.0",
   "description": "This is a tools for cordova developer to generate a basic file and directory structure for cordova custom plugin.",
-  "main": "plugincreater",
+  "main": "index.js",
   "preferGlobal": true,
   "bin": {
-    "plugincreater": "./index"
+    "pluginc": "index.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "helper",
     "tools"
   ],
-  "author": "ryou (46517115@qq.com)",
+  "author": "Ryou (46517115@qq.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryouaki/pluginCreater/issues"

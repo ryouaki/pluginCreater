@@ -1,0 +1,22 @@
+{
+  "name": "cordova-plugin-custom",
+  "version": "1.0.0",
+  "description": "Cordova custom Plugin",
+  "cordova": {
+    "id": "cordova-plugin-custom",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CordovaCn/CordovaPluginsDemo"
+  },
+  "keywords": [
+    "cordova",
+    "custom"
+  ],
+  "author": "46517115@qq.com",
+  "license": "Apache 2.0"
+}
