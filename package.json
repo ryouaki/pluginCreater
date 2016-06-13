@@ -12,7 +12,10 @@
     "url": "git+https://github.com/ryouaki/pluginCreater.git"
   },
   "files": [
-    "LICENSE"
+    "LICENSE",
+    "templates/",
+    "index.js",
+    "README.md"
   ],
   "keywords": [
     "cordova",

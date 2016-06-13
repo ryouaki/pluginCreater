@@ -9,6 +9,7 @@ var fs = require('fs');
 var currentDir = process.cwd();
 const DEFAULT_PLUGIN_NAME = 'cordova-plugin-custom';
 const COMMAND_LINE = ['-n','-p','-v','-h'];
+var currentName= DEFAULT_PLUGIN_NAME;
 
 var options = {
   info: {
@@ -138,9 +139,21 @@ function createPlugin(tasks) {
     createPluginXML(targetName, rootPath);
     createJSModule(targetName, rootPath);
     createPlatformSrc(targetName, rootPath);
+
+    displaySuccess();
   } catch(e) {
     console.log(e.message);
   }
+}
+
+function displaySuccess() {
+  console.log('Plugin files are created succesfully.');
+  console.log('Please open the directory of where you store the plugin and modify the files as below: ');
+  console.log('Readme.md(option)   : '+path.join(currentDir, currentName, 'README.md'));
+  console.log('plugin.xml          : '+path.join(currentDir, currentName, 'plugin.xml'));
+  console.log('package.json(option): '+path.join(currentDir, currentName, 'package.json'));
+  console.log('js-module(option)   : '+path.join(currentDir, currentName, 'www', '*.js'));
+  console.log('native code         : '+path.join(currentDir, currentName, 'src', '*'));
 }
 
 function createReadme(targetName,rootPath) {
