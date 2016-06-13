@@ -8,7 +8,7 @@ This is a tools for cordova developer to generate a basic directory structure fo
 - iOS
 
 ## Install 安装
-Download and Unzip(下载工具并解压) [link](https://github.com/ryouaki/pluginCreater/archive/master.zip)
+Download and Unzip(下载工具并解压) [ Download ](https://github.com/ryouaki/pluginCreater/archive/master.zip)
 ```sh
   npm install -g <yourLocalPath>/pluginCreater
 ```
