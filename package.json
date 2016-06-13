@@ -1,6 +1,6 @@
 {
   "name": "pluginCreater",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "This is a tools for cordova developer to generate a basic file and directory structure for cordova custom plugin.",
   "main": "index.js",
   "preferGlobal": true,
