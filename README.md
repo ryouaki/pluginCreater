@@ -2,6 +2,11 @@
 这是一个可以帮助Cordova开发者快速创建plugin基础框架的工具。<br>
 This is a tools for cordova developer to generate a basic directory structure for cordova custom plugin.
 
+## platform support(支持的平台)
+
+- Android
+- iOS
+
 ## Install 安装
 ```sh
   npm install -g <yourLocalPath>/pluginCreater
