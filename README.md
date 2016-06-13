@@ -8,6 +8,11 @@ This is a tools for cordova developer to generate a basic directory structure fo
 - iOS
 
 ## Install 安装
+Install from npmjs(从npmjs安装)
+```sh
+  npm install -g pluginCreater
+```
+If you can not connect to Npmjs,You can install this tool as below(如果你无法连接到npmjs服务器请按照以下方式安装):<br>
 Download and Unzip(下载工具并解压) [ Download ](https://github.com/ryouaki/pluginCreater/archive/master.zip)
 ```sh
   npm install -g <yourLocalPath>/pluginCreater
