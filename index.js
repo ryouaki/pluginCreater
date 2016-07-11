@@ -188,7 +188,7 @@ function createJSModule(targetName,rootPath) {
 
 function createPlatformSrc(targetName,rootPath) {
   let buffJava = fs.readFileSync(path.join(__dirname, '.', 'templates', 'src', 'android', 'customPlugin.java'), 'utf-8');
-  write(path.join(rootPath, '.', 'src', 'android', 'customPlugin.js'), buffJava);
+  write(path.join(rootPath, '.', 'src', 'android', 'customPlugin.java'), buffJava);
   let buffH = fs.readFileSync(path.join(__dirname, '.', 'templates', 'src', 'ios', 'CDVCustomPlugin.h'), 'utf-8');
   write(path.join(rootPath, '.', 'src', 'ios', 'CDVCustomPlugin.h'), buffH);
   let buffM = fs.readFileSync(path.join(__dirname, '.', 'templates', 'src', 'ios', 'CDVCustomPlugin.m'), 'utf-8');
